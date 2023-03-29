@@ -1,0 +1,48 @@
+{
+  "name": "star-wars",
+  "version": "1.0.0",
+  "description": "star wars",
+  "private": "true",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "keywords": [
+    "react",
+    "javascript",
+    "redux-toolkit",
+    "typescript"
+  ],
+  "author": "Alex Melkov",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.2",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "gh-pages": "^5.0.0",
+    "react": "^18.2.0",
+    "react-content-loader": "^6.2.1",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.9.0"
+  }
+}
