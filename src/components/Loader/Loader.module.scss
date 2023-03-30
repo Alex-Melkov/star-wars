@@ -1,0 +1,36 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+    img {
+        width: 300px;
+        height: 300px;
+        animation: loading 3s infinite linear;
+        -webkit-animation: loading 3s infinite linear;
+        -moz-animation: loading 3s infinite linear;
+        -o-animation: loading 3s infinite linear;
+
+        @media (max-width: 425px) {
+            width: 200px;
+            height: 200px;
+          }
+    }
+}
+
+@keyframes loading {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes loading {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@-moz-keyframes loading {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@-o-keyframes loading {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
