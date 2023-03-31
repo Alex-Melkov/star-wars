@@ -1,0 +1,79 @@
+.sortContainer {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 28px;
+
+    .sortName {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #212121;
+    }
+
+    .sortSelect {
+        width: 135px;
+        height: 24px;
+        background: #F2F2F2;
+        box-shadow: 2px 2px 2px rgba(33, 33, 33, 0.1);
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+
+        p {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+        }
+
+        svg {
+            position: absolute;
+            top: 11px;
+            right: 6px;
+        }
+    }
+
+    .sortPopup {
+        width: 135px;
+        position: absolute;
+        top: 33px;
+        right: 0;
+        background: #F2F2F2;
+        box-shadow: 4px 4px 8px rgba(1, 28, 64, 0.2);
+        border-radius: 8px;
+        z-index: 3;
+
+        ul {
+            margin-top: 6px;
+            margin-bottom: 6px;
+
+            li {
+                font-family: 'Source Sans Pro';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #000000;
+                padding-left: 32px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                cursor: pointer;
+
+                &:hover {
+                    background: #bbbbbb;
+                }
+            }
+        }
+    }
+}
