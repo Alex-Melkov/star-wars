@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 import styles from './BtnNav.module.scss';
 
-type BtnNavType = {
+type BtnNavProps = {
     children: string;
     backgroundColor: string;
     path: string;
 }
 
-const BtnNav: React.FC<BtnNavType> = ( {children, backgroundColor, path} ) => {
+const BtnNav: React.FC<BtnNavProps> = ( {children, backgroundColor, path} ) => {
   return (
     <Link to={path} style={{backgroundColor: `${backgroundColor}`}} className={styles.buttonNav}>{children}</Link>
   )

@@ -1,6 +1,9 @@
 import React from 'react';
+
 import Cart from '../../components/Cart/Cart';
 import Sort from '../../components/Sort/Sort';
+import Paginate from '../../components/Paginate/Paginate';
+import BtnWookiee from '../../components/BtnWookiee/BtnWookiee';
 
 import styles from './Characters.module.scss';
 
@@ -16,6 +19,8 @@ const Characters: React.FC = () => {
         </div>
         <Sort />
         <Cart />
+        <Paginate />
+        <BtnWookiee />
       </div>
     </div>
   )
