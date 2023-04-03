@@ -1,3 +1,50 @@
-.notFoundContainer {
-    
+.wrapper {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: #17002F;
+    position: relative;
+
+    .notFoundContainer {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .text {
+            font-weight: 700;
+            font-size: 47.5vw;
+            line-height: 100%;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.5);
+
+            @media (min-width: 1284px) {
+                font-size: 700px;
+                line-height: 818px;   
+              }
+        }
+
+        .deathStar {
+            width: 47vw;
+            height: 42.5vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media (min-width: 1284px) {
+                width: 690px;
+                height: 623px;  
+              }
+        }
+    }
+
+    .btnBlock {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
 }
