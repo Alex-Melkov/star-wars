@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import MainLayout from '../../layouts/MainLayout';
 import Loader from '../Loader/Loader';
+import CartModal from '../CartModal/CartModal';
 
 import styles from './App.module.scss';
 
@@ -10,8 +11,11 @@ const Characters = React.lazy(() => import(/* webpackChunkName: "Characters" */ 
 const NotFound = React.lazy(() => import(/* webpackChunkName: "NotFound" */ '../../pages/NotFound/NotFound'));
 
 const App: React.FC = () => {
+  let modalRef = React.useRef<HTMLDivElement>(null);
+
   return (
     <div className={styles.container}>
+      {/* <CartModal ref={modalRef} /> */}
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />

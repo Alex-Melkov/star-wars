@@ -8,7 +8,7 @@ type ColorGenderType = {
     hermaphrodite: string
 };
 
-let colorGender: ColorGenderType = {
+export const colorGender: ColorGenderType = {
     male: '#73D677',
     female: '#C956FF',
     hermaphrodite: '#F5DB13',
