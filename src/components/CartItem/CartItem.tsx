@@ -31,7 +31,7 @@ const CartItem: React.FC = () => {
             </div>
         </div>
         <div className={styles.cartItemInformation}>
-            <div style={{backgroundColor: `${colorGender['male']}`}} className={styles.gender}>male</div>
+            <div style={{backgroundColor: `${colorGender['hermaphrodite']}`}} className={styles.gender}>hermaphrodite</div>
             <div className={styles.age}>19BBY</div>
         </div>
     </div>

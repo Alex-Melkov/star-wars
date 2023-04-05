@@ -2,49 +2,53 @@
     min-width: 100vw;
     min-height: 100vh;
     background: #17002F;
-    position: relative;
 
     .notFoundContainer {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -10%);
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        position: relative;
 
-        .text {
-            font-weight: 700;
-            font-size: 47.5vw;
-            line-height: 100%;
-            letter-spacing: 4px;
-            color: rgba(255, 255, 255, 0.5);
+        .textAndStar {
+            max-width: 1284px;
+            max-height: 818px;
+            position: relative;
+            margin-top: 25px;
 
-            @media (min-width: 1284px) {
-                font-size: 700px;
-                line-height: 818px;   
-              }
+            .text {
+                font-weight: 700;
+                font-size: 47.5vw;
+                line-height: 100%;
+                letter-spacing: 4px;
+                color: rgba(255, 255, 255, 0.5);
+    
+                @media (min-width: 1284px) {
+                    font-size: 700px;
+                    line-height: 818px;   
+                  }
+            }
+    
+            .deathStar {
+                width: 47vw;
+                height: 42.5vw;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+    
+                @media (min-width: 1284px) {
+                    width: 690px;
+                    height: 623px;  
+                  }
+            }
         }
 
-        .deathStar {
-            width: 47vw;
-            height: 42.5vw;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .btnBlock {
+            margin-top: 20px;
 
-            @media (min-width: 1284px) {
-                width: 690px;
-                height: 623px;  
+            @media (max-width: 768px) {
+                margin-top: 30%;
               }
         }
-    }
-
-    .btnBlock {
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translate(-50%, -10%);
     }
 }

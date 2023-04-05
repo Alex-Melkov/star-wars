@@ -1,13 +1,33 @@
 .wrapper {
     width: 55.3%;
     max-width: 796px;
-    min-width: 280px;
+    min-width: 796px;
     min-height: 371px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
+
+    @media (max-width: 1024px) {
+        min-width: 600px;
+    }
+
+    @media (max-width: 768px) {
+        min-width: 500px;
+    }
+
+    @media (max-width: 600px) {
+        min-width: 400px;
+    }
+
+    @media (max-width: 500px) {
+        min-width: 300px;
+    }
+
+    @media (max-width: 375px) {
+        min-width: 250px;
+    }
 
     .modal {    
         position: relative;
@@ -16,6 +36,10 @@
         background: linear-gradient(180deg, #17002F 42.19%, #1F2A63 100%);
         border-radius: 8px 16px 16px 8px;
         display: flex;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
 
         .closeModal {
             position: absolute;
@@ -26,12 +50,27 @@
     
         .avatarBlock {
             width: 45.72%;
-            height: 371px;
+            min-height: 371px;
             background: #1F2A63;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 8px 0 0 8px;
+
+            @media (max-width: 600px) {
+                width: 100%;
+                min-height: 100px;
+                height: 250px;
+                border-radius: 8px 16px 0 0;
+            }
+
+            @media (max-width: 500px) {
+                height: 200px;
+            }
+
+            @media (max-width: 375px) {
+                height: 170px;
+            }
     
             .avatarAndInfo {
                 width: 95%;
@@ -93,17 +132,36 @@
     
         .infoBlock {
             width: 54.28%;
-            height: 371px;
+            min-height: 371px;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media (max-width: 600px) {
+                width: 100%;
+                min-height: 300px;
+            }
+
+            @media (max-width: 500px) {
+                min-height: 250px;
+            }
+
+            @media (max-width: 375px) {
+                min-height: 210px;
+            }
     
             .infoAndParams {
                 width: 96%;
-                height: 90%;
+                min-height: 350px;
+                padding: 5px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
+                @media (max-width: 600px) {
+                    min-height: 200px;
+                }
     
                 .nameCharacter {
                     font-weight: 700;
@@ -111,6 +169,16 @@
                     line-height: 42px;
                     color: #FDFDFD;
                     text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+
+                    @media (max-width: 500px) {
+                        font-size: 28px;
+                        line-height: 34px;
+                    }
+
+                    @media (max-width: 375px) {
+                        font-size: 22px;
+                        line-height: 28px;
+                    }
                 }
     
                 .params {
@@ -125,12 +193,39 @@
                     padding-left: 23px;
                     padding-right: 23px;
                     margin-top: 23px;
+                    margin-bottom: 10px;
+
+                    @media (max-width: 500px) {
+                        max-width: 200px;
+                        min-height: 80px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        margin-top: 15px;
+                    }
+
+                    @media (max-width: 375px) {
+                        max-width: 170px;
+                        min-height: 60px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        margin-top: 10px;
+                    }
     
                     .paramsItem {
                         font-weight: 400;
                         font-size: 16px;
                         line-height: 19px;
                         color: #000000;
+
+                        @media (max-width: 500px) {
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+
+                        @media (max-width: 375px) {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
                     }
                 }
     
@@ -139,6 +234,10 @@
                     justify-content: space-between;
                     max-width: 190px;
                     margin-top: auto;
+
+                    @media (max-width: 500px) {
+                        max-width: 170px;
+                    }
     
                     .heightAndMassBlock {
                         width: 83px;
@@ -150,6 +249,16 @@
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
+
+                        @media (max-width: 500px) {
+                            width: 73px;
+                            height: 60px;
+                        }
+
+                        @media (max-width: 375px) {
+                            width: 68px;
+                            height: 55px;
+                        }
     
                         .value {
                             width: 37px;
@@ -164,6 +273,20 @@
                             align-items: center;
                             color: #212121;
                             margin-bottom: 5px;
+
+                            @media (max-width: 500px) {
+                                width: 35px;
+                                height: 35px;
+                                font-size: 14px;
+                                line-height: 17px;
+                            }
+
+                            @media (max-width: 375px) {
+                                width: 33px;
+                                height: 33px;
+                                font-size: 12px;
+                                line-height: 15px;
+                            }
                         }
     
                         .nameValue {
