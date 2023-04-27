@@ -7,7 +7,7 @@ import styles from './MainLayout.module.scss';
 
 const MainLayout: React.FC = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} >
       <Header />
       <Outlet />
     </div>

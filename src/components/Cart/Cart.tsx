@@ -1,15 +1,23 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
+
 import CartItem from '../CartItem/CartItem';
 
 import styles from './Cart.module.scss';
 
-const Cart: React.FC = () => {
-    let items = [...new Array(10)];
+type CartPropsType = {
+    onOpen: () => void;
+    count: number | undefined;
+};
 
+const Cart: React.FC<CartPropsType> = ( {onOpen, count = 0} ) => {
+    let items = [...new Array(10)];
+    
   return (
         <div className={styles.cartContainer}>
             {items.map((item, index) => (
-                <CartItem key={index} />
+                <CartItem onOpen={onOpen} key={index} itemId={index + 1} />
             ))}
         </div>
   )

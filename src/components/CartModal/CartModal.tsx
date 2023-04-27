@@ -4,17 +4,29 @@ import Male from '../../images/avatar/male.png';
 import Female from '../../images/avatar/female.png';
 import Close from '../../images/close.png';
 
-import { colorGender } from '../CartItem/CartItem';
-
 import styles from './CartModal.module.scss';
 
-type CartModalProps = React.HTMLProps<HTMLDivElement>;
+type ColorGenderType = {
+  male: string;
+  female: string;
+  hermaphrodite: string; 
+};
 
-const CartModal = React.forwardRef<HTMLDivElement, CartModalProps>((props, modalRef) => {
+export const colorGender: ColorGenderType = {
+  male: '#73D677',
+  female: '#C956FF',
+  hermaphrodite: '#F5DB13',
+};
+
+type CartModalPropsType = {
+  onClose: () => void;
+}
+
+const CartModal: React.FC<CartModalPropsType> = ( {onClose} ) => {
   return (
     <div className={styles.wrapper}>
-      <div ref={modalRef} className={styles.modal}>
-        <img className={styles.closeModal} src={Close} alt="Close" />
+      <div className={styles.modal}>
+        <img onClick={onClose} className={styles.closeModal} src={Close} alt="Close" />
         <div className={styles.avatarBlock}>
           <div className={styles.avatarAndInfo}>
             <div className={styles.avatar}>
@@ -49,6 +61,6 @@ const CartModal = React.forwardRef<HTMLDivElement, CartModalProps>((props, modal
       </div>
     </div>
   )
-})
+}
 
 export default CartModal;

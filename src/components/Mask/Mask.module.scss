@@ -1,0 +1,24 @@
+.masked {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #212121;
+    visibility: hidden;
+    opacity: 0;
+
+    &Visible {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        background-color: #212121;
+        visibility: visible;
+        opacity: 0.5;
+        z-index: 2;
+    }
+}
